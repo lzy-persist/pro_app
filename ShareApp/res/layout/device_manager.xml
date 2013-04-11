@@ -1,0 +1,212 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/top_operateion"
+        android:layout_width="fill_parent"
+        android:layout_height="35.0dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/head_title_bg"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/cond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" >
+                 <ImageView 
+			       android:id="@+id/dmback" 
+			       android:layout_width="wrap_content"
+			       android:layout_height="30.0dip"  
+			       android:layout_centerVertical="true" 
+			       android:layout_marginLeft="5.0dip"
+			       android:src="@drawable/back"
+			      />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.0dip"
+                android:layout_marginLeft="5.0dip"
+                 >
+
+                <EditText
+                    android:id="@+id/number_value"
+                    android:layout_width="125.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dj_edit_login"
+                    android:maxLength="12"
+                    android:paddingLeft="50.0dip"
+                    android:saveEnabled="true"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:textSize="10.0dip" 
+			        android:textColor="#ff3f3f3f"
+			        android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/number_value"
+                    android:layout_alignLeft="@+id/number_value"
+                    android:layout_alignTop="@+id/number_value"
+                    android:text="@string/jgdm" />
+                
+                 <EditText
+                    android:id="@+id/code_value"
+                    android:layout_width="125.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dj_edit_login"
+                    android:maxLength="12"
+                    android:paddingLeft="50.0dip"
+                    android:layout_toRightOf="@+id/number_value"
+                    android:layout_marginLeft="5.0dip"
+                    android:saveEnabled="true"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:textSize="10.0dip" 
+			        android:textColor="#ff3f3f3f"
+			        android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/code_value"
+                    android:layout_alignLeft="@+id/code_value"
+                    android:layout_alignTop="@+id/code_value"
+                    android:text="@string/jgmc" />
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/search_device"
+                android:layout_width="wrap_content"
+                android:layout_height="35.0dip"
+                android:src="@drawable/ic_menu_search" >
+            </ImageView>
+        </LinearLayout>
+
+        <!-- <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35.0dip"
+            android:layout_alignBottom="@+id/cond"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/cond"
+            android:layout_gravity="center" >
+
+            <TextView
+                android:id="@+id/add_device"
+                android:layout_width="wrap_content"
+                android:layout_height="35.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:paddingTop="6.0dip"
+                android:text="@string/add_device" />
+
+            <TextView
+                android:id="@+id/remove_device"
+                android:layout_width="wrap_content"
+                android:layout_height="35.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:paddingTop="6.0dip"
+                android:text="@string/remove_device" />
+
+            <TextView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="35.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:paddingTop="6.0dip"
+                android:text="返回" /> 
+        </LinearLayout> -->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/page_bottom"
+        android:layout_below="@+id/top_operateion"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/device_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:cacheColorHint="#00000000" />
+        <!-- android:layout_gravity="right|center_vertical" -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/page_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="35.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bg"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="70.0dip"
+            android:layout_height="30.0dip"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="3.0dip"
+            android:background="@drawable/home_btn_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="0条"
+            android:textColor="@color/white"
+            android:textSize="18.0dip" />
+
+        <ImageView
+            android:id="@+id/first"
+            android:layout_width="wrap_content"
+            android:layout_height="30.0dip"
+            android:layout_marginTop="3.0dip"
+            android:background="@drawable/home_btn_bg"
+            android:clickable="true"
+            android:src="@drawable/first2" >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/prev"
+            android:layout_width="wrap_content"
+            android:layout_height="30.0dip"
+            android:layout_marginTop="3.0dip"
+            android:background="@drawable/home_btn_bg"
+            android:clickable="true"
+            android:src="@drawable/prev2" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/curentPage"
+            android:layout_width="wrap_content"
+            android:layout_height="30.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="16.0dip"
+            android:layout_marginTop="3.0dip"
+            android:text="0/0"
+            android:textColor="@color/white"
+            android:textSize="15.0dip" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="30.0dip"
+            android:layout_marginTop="3.0dip"
+            android:background="@drawable/home_btn_bg"
+            android:clickable="true"
+            android:src="@drawable/next2" >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/last"
+            android:layout_width="wrap_content"
+            android:layout_height="30.0dip"
+            android:layout_marginTop="3.0dip"
+            android:background="@drawable/home_btn_bg"
+            android:clickable="true"
+            android:src="@drawable/last2" >
+        </ImageView>
+    </LinearLayout>
+
+</RelativeLayout>

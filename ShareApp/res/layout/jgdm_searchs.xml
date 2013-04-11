@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+     <RelativeLayout
+        android:id="@+id/sea_top"
+        android:layout_width="fill_parent"
+        android:layout_height="30.0dip"
+        android:background="@drawable/head_title_bg"
+        android:layout_alignParentTop="true"
+       >
+	  <ImageView 
+	       android:id="@+id/seaback" 
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"  
+	       android:layout_centerVertical="true"
+	       android:src="@drawable/back"
+	       android:onClick="seaBack"
+	       android:layout_marginLeft="5.0dip"
+	      />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="35.0dip"
+            android:gravity="center"
+            android:text="@string/jgdm_search"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:textSize="14.0dip" />
+	  <ImageView 
+	       android:id="@+id/enterlist" 
+	       android:layout_width="wrap_content"
+	       android:layout_centerVertical="true" 
+	       android:layout_height="wrap_content"  
+           android:layout_alignParentRight="true"
+	       android:src="@drawable/jgcx"
+	       android:layout_marginRight="5.0dip"
+	       android:onClick="findJgdm"
+	      />
+     </RelativeLayout>
+
+ <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="120.0dip"
+        android:layout_marginLeft="20.0dip"
+        android:text="机构代码：" />
+
+    <EditText
+        android:id="@+id/jgdmCode"
+        android:layout_width="150.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/jgdmCode"
+        android:layout_marginRight="10dp"
+        android:layout_alignBaseline="@+id/jgdmCode"
+        android:textColor="@color/red"
+        android:textSize="10.0dip"
+        android:text="(9位机构代码)" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="16dp"
+        android:text="机构名称：" />
+	<EditText
+	        android:id="@+id/jgmcCode"
+	        android:layout_width="150.0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/textView1"
+	        android:layout_alignBaseline="@+id/textView3"
+	        android:layout_marginTop="16dp"
+	        android:layout_toRightOf="@+id/textView3"
+	        />
+    <Button
+        android:id="@+id/jqcx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="80.0dip"
+        android:layout_marginTop="16dp"
+        android:textSize="12.0dip"
+        android:text="精确查询" />
+    <Button
+        android:id="@+id/mhcx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_alignBaseline="@+id/jqcx"
+        android:layout_toRightOf="@+id/jqcx"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="16dp"
+        android:textSize="12.0dip"
+        android:text="模糊查询" />
+</RelativeLayout>

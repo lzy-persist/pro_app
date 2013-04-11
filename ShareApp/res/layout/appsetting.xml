@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    <RelativeLayout
+        android:id="@+id/main_top"
+        android:layout_width="fill_parent"
+        android:layout_height="30.0dip"
+        android:background="@drawable/head_title_bg"
+        android:layout_alignParentTop="true"
+       >
+        <TextView
+            android:id="@+id/set_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="系统设置"
+            android:textColor="@color/black"
+            android:textSize="14.0dip" 
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+     </RelativeLayout>
+
+        <Button
+            android:id="@+id/net_set"
+            android:layout_width="120.0dip"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/workunit_set"
+            android:layout_alignLeft="@+id/workunit_set"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bt_bg"
+            android:onClick="netSet"
+            android:text="网络设置" />
+        <Button
+            android:id="@+id/workunit_set"
+            android:layout_width="120.0dip"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/change_user"
+            android:layout_alignLeft="@+id/change_user"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bt_bg"
+            android:onClick="workunitSet"
+            android:text="系统设置" />
+        <Button
+            android:id="@+id/change_user"
+            android:layout_width="120.0dip"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/app_exit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bt_bg"
+            android:onClick="changeUser"
+            android:text="切换用户" />
+        <Button
+            android:id="@+id/app_exit"
+            android:background="@drawable/bt_bg"
+            android:layout_width="120.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/change_user"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="80dp"
+            android:onClick="appExit"
+            android:text="退出应用" />
+    </RelativeLayout>
+    
+</LinearLayout>

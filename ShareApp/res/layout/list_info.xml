@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+         <TextView
+             android:id="@+id/codeId"
+             android:layout_width="wrap_content"
+             android:layout_height="20.0dip"
+             android:gravity="center_vertical"
+             android:textColor="@color/black"
+             android:textSize="12.0dip" >
+         </TextView>
+         <TextView
+	          android:id="@+id/addTime"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:layout_alignParentRight="true"
+	          android:layout_alignParentTop="true"
+          />
+
+         <TextView
+             android:id="@+id/codeName"
+             android:layout_width="wrap_content"
+             android:layout_height="20.0dip"
+             android:layout_alignParentLeft="true"
+             android:layout_below="@+id/codeId"
+             android:gravity="center_vertical"
+             android:textColor="@color/black"
+             android:textSize="12.0dip" />
+
+         <TextView
+             android:id="@+id/bzjgName"
+             android:layout_width="wrap_content"
+             android:layout_height="20.0dip"
+             android:layout_alignParentLeft="true"
+             android:layout_below="@+id/codeName"
+             android:gravity="center_vertical"
+             android:textColor="@color/black"
+             android:textSize="12.0dip" />
+
+         <TextView
+             android:id="@+id/jjhy"
+             android:layout_width="wrap_content"
+             android:layout_height="20.0dip"
+             android:layout_below="@+id/bzjgName"
+             android:layout_alignParentLeft="true"
+             android:gravity="center_vertical"
+             android:textColor="@color/black"
+             android:textSize="12.0dip" />
+
+         <TextView
+             android:id="@+id/addressName"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/jjhy"
+             android:layout_alignParentLeft="true"
+             android:gravity="center_vertical"
+             android:textColor="@color/black"
+             android:textSize="12.0dip" />
+
+</RelativeLayout>
