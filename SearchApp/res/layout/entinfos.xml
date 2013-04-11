@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   <RelativeLayout
+        android:id="@+id/main_top"
+        android:layout_width="fill_parent"
+        android:layout_height="30.0dip"
+        android:background="@drawable/head_title_bg"
+        android:layout_alignParentTop="true"
+       >
+		  <ImageView 
+		       android:id="@+id/entback" 
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:layout_centerVertical="true"  
+		       android:src="@drawable/back"
+		       android:layout_marginLeft="5.0dip"
+		       android:onClick="entback"
+		      />
+
+	        <TextView
+	            android:id="@+id/title"
+	            android:layout_width="wrap_content"
+	            android:layout_height="34.0dip"
+	            android:layout_alignParentTop="true"
+	            android:layout_centerHorizontal="true"
+	            android:gravity="center"
+	            android:text="@string/enter_info"
+	            android:textColor="@color/black"
+	            android:textSize="14.0dip" />
+		  <ImageView 
+		       android:id="@+id/homeback" 
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:layout_centerVertical="true"
+		       android:layout_alignParentRight="true"
+		       android:src="@drawable/home"
+		       android:layout_marginRight="5.0dip"
+		       android:onClick="homeback"
+		      />
+     </RelativeLayout> 
+
+       <TextView
+            android:id="@+id/err_infos"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="sans-serif-light"
+             />
+   <TableLayout	android:id="@+id/table_info"
+       android:layout_width="match_parent" 
+       android:layout_height="wrap_content" >
+
+   </TableLayout>
+   
+</LinearLayout>

@@ -1,0 +1,12 @@
+<resources>
+
+
+    <dimen name="bottom_tab_padding_up">3.0dip</dimen>
+    <dimen name="item_marginRight">30.0dip</dimen>
+    <dimen name="bottom_tab_padding_drawable">2.0dip</dimen>
+    <dimen name="bottom_tab_font_size">14.0dip</dimen>
+    <dimen name="botton_width">120.0dip</dimen>
+    <dimen name="tab_size">10.0dip</dimen>
+    <dimen name="text_font_size">12.0dip</dimen>
+    
+</resources>

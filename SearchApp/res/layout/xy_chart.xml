@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/chart_top"
+        android:layout_width="fill_parent"
+        android:layout_height="30.0dip"
+        android:background="@drawable/head_title_bg"
+        android:layout_alignParentTop="true"
+       >
+		  <ImageView 
+		       android:id="@+id/chartback" 
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:layout_centerVertical="true"  
+		       android:src="@drawable/back"
+		       android:layout_marginLeft="5.0dip"
+		       android:onClick="chartback"
+		      />
+
+	        <TextView
+	            android:id="@+id/title"
+	            android:layout_width="wrap_content"
+	            android:layout_height="34.0dip"
+	            android:layout_alignParentTop="true"
+	            android:layout_centerHorizontal="true"
+	            android:gravity="center"
+	            android:text="@string/chart_info"
+	            android:textColor="@color/black"
+	            android:textSize="14.0dip" />
+		  <ImageView 
+		       android:id="@+id/charthomeback" 
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:layout_centerVertical="true"
+		       android:layout_alignParentRight="true"
+		       android:src="@drawable/home"
+		       android:layout_marginRight="5.0dip"
+		       android:onClick="homeback"
+		      />
+     </RelativeLayout> 
+
+   	<LinearLayout android:id="@+id/chart" android:orientation="horizontal" 
+	android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1" />
+   
+   	<LinearLayout android:orientation="horizontal" android:background="@drawable/head_title_bg" android:gravity="center"
+		android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_vertical">
+	   	<Button android:id="@+id/statis_pie" 
+	        android:layout_width="28.0dip"
+	        android:layout_height="28.0dip"
+	        android:layout_below="@+id/chart"
+			android:layout_alignParentLeft="true"
+	        android:background="@drawable/bt_bg"
+	        android:textSize="12.0dip"
+	        android:text="饼图"
+	        />	    
+	    <Button android:id="@+id/statis_bar" 
+	        android:layout_width="40.0dip"
+	        android:layout_height="28.0dip"
+	        android:background="@drawable/bt_bg"
+	        android:layout_below="@+id/chart"
+	        android:layout_alignBaseline="@+id/statis_pie"
+	        android:layout_toRightOf="@+id/statis_pie"
+	        android:layout_marginLeft="5.0dip"
+	        android:textSize="12.0dip"
+	        android:text="柱状图"
+	        />	   
+	</LinearLayout>
+</LinearLayout>

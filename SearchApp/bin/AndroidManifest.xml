@@ -1,0 +1,67 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.nacao.searchapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher" 
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <activity android:name=".manage.LoginActivity" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+<!--         <activity android:name=".manage.AppTabWidge" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+ -->        
+        <activity android:name=".manage.AppTabWidge"/>
+        <activity android:name=".manage.JgdmInfoActivity"/>
+        <activity android:name=".manage.JgdmListActivity"/>
+        <activity android:name=".manage.SearchActivity"/>
+        <activity android:name=".manage.SettingsActivity"/>
+        <activity android:name=".manage.UserinfoActivity"/>
+        <activity android:name=".manage.StatisticsActivity"/>
+        <activity android:name=".statistics.AreaPieStatistics" />
+        <activity android:name=".statistics.IndustryPieStatistics" />
+        
+        <service android:name=".service.LogService">
+            <intent-filter >
+                <action android:name="org.searchapp.APP_LOG_SERVICE"/>
+				<action android:name="com.walktour.gui.MONITOR_LOG_SIZE"></action>
+				<action android:name="com.walktour.gui.SWITCH_LOG_FILE_ACTION"></action>                
+            </intent-filter>
+        </service>
+        
+        <activity android:name="org.achartengine.GraphicalActivity" />
+    </application>
+
+        <supports-screens android:smallScreens="true"
+            android:normalScreens="true"
+            android:largeScreens="true"
+            android:resizeable="true"
+            android:anyDensity="true" />
+</manifest>

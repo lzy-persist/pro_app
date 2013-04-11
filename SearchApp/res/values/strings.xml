@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">机构代码查询</string>
+    <string name="fiirst_page">首页</string>
+    <string name="my_account">用户信息</string>
+    <string name="app_setting">设置</string>
+    <string name="jgdm_search">信息检索</string>
+    <string name="enterprise_list">机构查询</string>
+	<string name="enter_info">详细信息</string>
+    <string name="user_info">我的账号</string>
+    <string name="next">下一步</string>
+    <string name="jgdm">机构代码:</string>
+    <string name="jgmc">机构名称:</string>
+    <string name="statis_info">机构统计</string>
+    <string name="chart_info">统计图表</string>
+    
+</resources>
